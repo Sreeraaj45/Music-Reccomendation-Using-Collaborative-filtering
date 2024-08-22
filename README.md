@@ -26,5 +26,32 @@ To run this project, you need to have the following Python libraries installed:
 
 You can install the required libraries using pip:
 
+## Overview
+
+This project involves creating a music recommendation system using a Spotify dataset. The system utilizes a collaborative filtering approach to recommend songs based on their similarity. The key steps are data loading and preprocessing, matrix construction, similarity calculation, and recommendation retrieval.
+
+## How It Works
+
+### 1. Data Loading and Preprocessing
+
+- **Dataset:** The dataset is loaded from `Spotify-2000.csv`.
+- **Cleaning:** Duplicate entries and missing values are removed to ensure data quality.
+- **Encoding:** Categorical variables (Artist and Title) are encoded into numerical features for processing.
+
+### 2. Matrix Construction
+
+- **User-Item Matrix:** A matrix is constructed using the `Artist` and `Title` columns, with `Popularity` as the value.
+- **Sparse Matrix:** This matrix is converted into a sparse matrix format to improve computational efficiency.
+
+### 3. Similarity Calculation
+
+- **Cosine Similarity:** Item-item similarity is computed using cosine similarity.
+- **Similarity Matrix:** A similarity matrix is generated to facilitate song recommendations.
+
+### 4. Recommendation Function
+
+- **Retrieval:** Given a song title, the system retrieves and sorts similar songs based on the similarity matrix.
+- **Display:** The top recommendations are shown in the Streamlit app.
+
 ```bash
 pip install streamlit pandas numpy scikit-learn scipy
