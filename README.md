@@ -53,5 +53,3 @@ This project involves creating a music recommendation system using a Spotify dat
 - **Retrieval:** Given a song title, the system retrieves and sorts similar songs based on the similarity matrix.
 - **Display:** The top recommendations are shown in the Streamlit app.
 
-```bash
-pip install streamlit pandas numpy scikit-learn scipy
